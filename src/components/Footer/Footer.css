@@ -1,0 +1,93 @@
+.footer {
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+}
+
+.footer-left .footer-address {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.footer-email {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons .icon {
+  font-size: 20px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-icons .icon:hover {
+  color: #007bff;
+}
+
+.footer-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #007bff;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom .footer-link {
+  color: #777;
+}
+
+.footer-bottom .footer-link:hover {
+  color: #007bff;
+}
+.footer h5 {
+  font-weight: 600;
+  font-size: 18px;
+}
+.footer h6 {
+  font-weight: 600;
+  font-size: 18px;
+  padding-top: 130px;
+}
+
+.footer p,
+.footer a {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.footer .footer-bottom {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer-link:hover {
+  color: #007bff;
+}

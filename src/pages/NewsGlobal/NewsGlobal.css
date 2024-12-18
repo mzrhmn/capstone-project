@@ -1,0 +1,81 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  border-radius: 15px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.btn-group .btn {
+  margin: 0 5px;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+}
+
+.btn-group .btn-outline-secondary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-group .btn-outline-secondary:hover {
+  background-color: #0056b3;
+}
+
+.btn-group .btn:nth-child(2) {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-group .btn:nth-child(2):hover {
+  background-color: #495057;
+}
+
+.card-img-top {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.bd-placeholder-img {
+  border-radius: 15px 15px 0 0;
+}
+
+.text-body-secondary {
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .btn-group .btn {
+    margin: 5px 0;
+  }
+}
+
+.card {
+  border-radius: 15px;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-group .btn {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.card-body {
+  font-family: "Poppins", sans-serif;
+}
