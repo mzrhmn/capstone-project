@@ -7,16 +7,20 @@ const api = (() => {
   } = process.env;
   const BASE_URL = `${REACT_APP_PROTOCOL}://${REACT_APP_HOST}:${REACT_APP_PORT}`;
 
-  function saveLocalNews(data) {
-    localStorage.setItem('articles', data);
+  function saveLocalNews(news) {
+    const localNews = getLocalNews();
+    localNews.push(news)
+    localStorage.setItem('news', JSON.stringify(localNews));
   }
 
   function getLocalNews() {
-    return localStorage.getItem('articles');
+    return JSON.parse(localStorage.getItem('news')) || [];
   }
 
-  function deleteLocalNews(data) {
-    return localStorage.removeItem('articles', data);
+  function deleteLocalNews(id) {
+    const localNews = getLocalNews();
+    const newLocalNews = localNews.filter((news) => news._id !== id);
+    localStorage.setItem('news', JSON.stringify(newLocalNews));
   }
 
   async function getNews({ query }) {
