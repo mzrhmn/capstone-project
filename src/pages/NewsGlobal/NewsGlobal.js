@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./NewsGlobal.css";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncReceiveNews } from "../../store/news/action";
+import { saveNewsActionCreator } from "../../store/saved/action";
 
 const NewsGlobal = () => {
   const dispatch = useDispatch();
@@ -12,6 +13,10 @@ const NewsGlobal = () => {
   useEffect(() => {
     dispatch(asyncReceiveNews({ query: 'Indonesia' }));
   }, [dispatch]);
+
+  const onSave = ({ news }) => {
+    dispatch(saveNewsActionCreator(news))
+  }
 
   return (
     <main>
@@ -61,6 +66,7 @@ const NewsGlobal = () => {
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-secondary"
+                          onClick={() => onSave({ news: value })}
                         >
                           Save
                         </button>
