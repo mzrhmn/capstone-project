@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./NewsGlobal.css";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncReceiveNews } from "../../store/news/action";
-import { saveNewsActionCreator } from "../../store/saved/action";
+import { saveNewAction } from "../../store/saved/action";
 
 const NewsGlobal = () => {
   const dispatch = useDispatch();
@@ -14,8 +14,8 @@ const NewsGlobal = () => {
     dispatch(asyncReceiveNews({ query: 'Indonesia' }));
   }, [dispatch]);
 
-  const onSave = ({ news }) => {
-    dispatch(saveNewsActionCreator(news))
+  const onSave = ({ id, news }) => {
+    dispatch(saveNewAction({ id, news, }))
   }
 
   return (
@@ -66,9 +66,10 @@ const NewsGlobal = () => {
                         <button
                           type="button"
                           class="btn btn-sm btn-outline-secondary"
-                          onClick={() => onSave({ news: value })}
+                          disabled={value.isSaved}
+                          onClick={() => onSave({ id: value._id, news: value })}
                         >
-                          Save
+                          {value.isSaved ? 'Saved' : 'Save'}
                         </button>
                       </div>
                       <small class="text-body-secondary">{value?.pub_date}</small>

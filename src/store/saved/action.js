@@ -1,3 +1,5 @@
+import { updateIssLikedNewsActionCreator } from "../news/action";
+
 const ActionType = {
   SAVE_NEWS: 'SAVE_NEWS',
   UNSAVE_NEWS: 'UNSAVE_NEWS',
@@ -21,8 +23,32 @@ function unsaveNewsActionCreator(id) {
   };
 }
 
+function saveNewAction({ news, id }) {
+  return async (dispatch) => {
+    try {
+      dispatch(saveNewsActionCreator(news))
+      dispatch(updateIssLikedNewsActionCreator(id))
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+function unsaveNewAction({ id }) {
+  return async (dispatch) => {
+    try {
+      dispatch(unsaveNewsActionCreator(id))
+      dispatch(updateIssLikedNewsActionCreator(id))
+    } catch (error) {
+      console.log(error);
+    }
+  }
+}
+
 export {
   ActionType,
   saveNewsActionCreator,
   unsaveNewsActionCreator,
+  saveNewAction,
+  unsaveNewAction,
 };

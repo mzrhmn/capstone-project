@@ -3,7 +3,7 @@
 // redux
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
-import { unsaveNewsActionCreator } from "../../store/saved/action";
+import { unsaveNewAction } from "../../store/saved/action";
 
 export default function SavedNews() {
   const {
@@ -12,7 +12,7 @@ export default function SavedNews() {
   const dispatch = useDispatch();
 
   const onDelete = ({ id }) => {
-    dispatch(unsaveNewsActionCreator(id))
+    dispatch(unsaveNewAction({ id }))
   }
 
   if (!save.length > 0) {

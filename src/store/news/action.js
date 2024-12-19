@@ -2,6 +2,7 @@ import api from "../../utils/api";
 
 const ActionType = {
   RECEIVE_NEWS: 'RECEIVE_NEWS',
+  UPDATE_IS_LIKED_NEWS: 'UPDATE_IS_LIKED_NEWS',
 };
 
 function receiveNewsActionCreator(news) {
@@ -9,6 +10,15 @@ function receiveNewsActionCreator(news) {
     type: ActionType.RECEIVE_NEWS,
     payload: {
       news,
+    }
+  };
+}
+
+function updateIssLikedNewsActionCreator(id) {
+  return {
+    type: ActionType.UPDATE_IS_LIKED_NEWS,
+    payload: {
+      id,
     }
   };
 }
@@ -28,4 +38,5 @@ export {
   ActionType,
   receiveNewsActionCreator,
   asyncReceiveNews,
+  updateIssLikedNewsActionCreator
 };
