@@ -1,19 +1,18 @@
-import { ActionType } from './action';
+import { ActionType } from "./action";
 
 function newsReducer(news = [], action = {}) {
   switch (action.type) {
     case ActionType.RECEIVE_NEWS:
-      return action.payload.news.map((value) => ({
-        ...value,
-        isSaved: false,
-      }));
+      return action.payload.news;
     case ActionType.UPDATE_IS_LIKED_NEWS:
-      return news.map(item => item._id === action.payload.id ?
-        {
-          ...item,
-          isSaved: item.isSaved === false ? true : false
-        } : item
-      )
+      return news.map((item) =>
+        item._id === action.payload.id
+          ? {
+              ...item,
+              isSaved: item.isSaved === false ? true : false,
+            }
+          : item
+      );
     default:
       return news;
   }
