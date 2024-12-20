@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
-import "./NewsGlobal.css";
+import "./Programming.css";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncReceiveNews } from "../../store/news/action";
 import { saveNewAction, unsaveNewAction } from "../../store/saved/action";
 
-const NewsGlobal = () => {
+const Programming = () => {
   const dispatch = useDispatch();
   const { news = [] } = useSelector((states) => states);
 
   useEffect(() => {
-    dispatch(asyncReceiveNews({ query: "Indonesia" }));
+    dispatch(asyncReceiveNews({ query: "programming" }));
   }, [dispatch]);
 
-  //ini Contoh awal Button Save
   // const onSave = ({ id, news }) => {
   //   dispatch(saveNewAction({ id, news }));
   // };
@@ -22,8 +21,8 @@ const NewsGlobal = () => {
       <section class="py-1 text-left container">
         <div class="row py-lg-1">
           <div class="col-lg-6 col-md-1">
-            <h3>Berita Indonesia</h3>
-            <p>Cek berita ter-update seputar Indonesia!</p>
+            <h3>Berita Programming</h3>
+            <p>Cek berita ter-update seputar Programming!</p>
           </div>
         </div>
       </section>
@@ -72,13 +71,13 @@ const NewsGlobal = () => {
                         >
                           {value.isSaved ? "Unsave" : "Save"}
                         </button>
-                        {/* Ini contoh awal button save */}
                         {/* <button
                           type="button"
                           class="btn btn-sm btn-outline-secondary"
+                          disabled={value.isSaved}
                           onClick={() => onSave({ id: value._id, news: value })}
                         >
-                          {value.isSaved ? "Unsave" : "Save"}
+                          {value.isSaved ? "Saved" : "Save"}
                         </button> */}
                       </div>
                       <small class="text-body-secondary">
@@ -96,4 +95,4 @@ const NewsGlobal = () => {
   );
 };
 
-export default NewsGlobal;
+export default Programming;

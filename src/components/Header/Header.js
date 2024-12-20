@@ -15,7 +15,7 @@ const Header = () => {
             Temukan informasi Aktual, Cepat, dan Akurat sesuai dengan trend dan
             kesukaanmu. Jangan tunggu lagi, Baca berita selengkapnya di sini!
           </p>
-          <button className="btn btn-primary btn-magenta">Latest NEWS →</button>
+          <button className="btn btn-primary btn-beritau">Informasi →</button>
         </div>
 
         <div className="col-lg-6 col-md-12 image-section">

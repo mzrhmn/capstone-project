@@ -22,21 +22,20 @@
   margin: 20px 0;
 }
 
-.btn-magenta {
+.btn-beritau {
   background: linear-gradient(to right, #ff0077, #7303c0);
   color: white;
   font-family: "Poppins", sans-serif;
   border: none;
-  border-color: #7303c0;
+
   padding: 10px 20px;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 1rem;
 }
 
-.btn-magenta:hover {
-  color: #fff;
-  background: linear-gradient(to right, #7303c0, #ff0077);
-  border-color: #7303c0;
+.btn-beritau:hover {
+  background: linear-gradient(to right, #7303c0, #b247f9);
+  border: none;
 }
 
 .image-wrapper {

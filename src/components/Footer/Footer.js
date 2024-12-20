@@ -15,11 +15,12 @@ function Footer() {
     <footer className="footer bg-white py-4">
       <div className="container">
         <div className="row">
-          {/* Kiri: Logo dan Alamat */}
+          <div className="footer-left">
+            <img src={Logo} alt="Logo Beritau" className="footer-logo" />
+            <img src={Logo1} alt="Logo Hactiv8" className="footer-logo" />
+          </div>
           <div className="col-md-5">
             <div className="footer-left">
-              <img src={Logo} alt="Logo Beritau" className="footer-logo" />
-              <img src={Logo1} alt="Logo Hactiv8" className="footer-logo" />
               <h5 className="mt-3 fw-bold">Beritau</h5>
               <p className="footer-address">
                 Berita terbaru dari berbagai referensi <br />
